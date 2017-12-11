@@ -1,17 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        Ainterface ainterface = new AinterfaceImpl();
-            GameCharacter character = new GameCharacter();
+        Adapter adapter = new AdapterImpl();
 
-            character.attack();
-
-            character.setWeapon(new Knife());
-            character.attack();
-
-            character.setWeapon(new Sword());
-            character.attack();
-
-            character.setWeapon(new Ax());
-            character.attack();
+        System.out.println(adapter.twiceOf(100f));
+        System.out.println(adapter.halfOf(80f));
     }
 }
