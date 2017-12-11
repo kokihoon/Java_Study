@@ -1,8 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        Adapter adapter = new AdapterImpl();
+        AnimalCharter animalCharter = new AnimalCharter();
 
-        System.out.println(adapter.twiceOf(100f));
-        System.out.println(adapter.halfOf(80f));
+        animalCharter.setAnimal(new Dog());
+        animalCharter.cry();
+        animalCharter.setAnimal(new Cat());
+        animalCharter.cry();
     }
 }
