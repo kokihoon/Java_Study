@@ -1,11 +1,17 @@
 public class Main {
     public static void main(String[] args) {
         Ainterface ainterface = new AinterfaceImpl();
+            GameCharacter character = new GameCharacter();
 
-        //통로
-        ainterface.funcA();
+            character.attack();
 
-        AObj aObj = new AObj();
-        aObj.funcAA();
+            character.setWeapon(new Knife());
+            character.attack();
+
+            character.setWeapon(new Sword());
+            character.attack();
+
+            character.setWeapon(new Ax());
+            character.attack();
     }
 }
