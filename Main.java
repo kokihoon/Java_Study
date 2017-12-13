@@ -1,10 +1,21 @@
 public class Main {
     public static void main(String[] args) {
-        AnimalCharter animalCharter = new AnimalCharter();
+        SystemSpeaker speaker1 = SystemSpeaker.getInstance();
+        SystemSpeaker speaker2 = SystemSpeaker.getInstance();
 
-        animalCharter.setAnimal(new Dog());
-        animalCharter.cry();
-        animalCharter.setAnimal(new Cat());
-        animalCharter.cry();
+        //5, 5
+        System.out.println(speaker1.getVolume());
+        System.out.println(speaker2.getVolume());
+
+        speaker1.setVolume(11);
+        //11, 11
+        System.out.println(speaker1.getVolume());
+        System.out.println(speaker2.getVolume());
+
+        speaker2.setVolume(22);
+        //22, 22
+        System.out.println(speaker1.getVolume());
+        System.out.println(speaker2.getVolume());
+
     }
 }

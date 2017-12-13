@@ -9,6 +9,9 @@ public class Eagle extends Animal1 {
     public Eagle() {
         cry = new BirdCry();
 
+
+
+
         fly = new FlyHighWings();
     }
 }
