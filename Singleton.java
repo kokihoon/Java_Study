@@ -19,4 +19,12 @@ public class Singleton {
         }
         return singleton;
     }
+
+    public void setSingle(int single) {
+        this.single = single;
+    }
+
+    public int getSingle() {
+        return single;
+    }
 }

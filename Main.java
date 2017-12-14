@@ -1,21 +1,27 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        SystemSpeaker speaker1 = SystemSpeaker.getInstance();
-        SystemSpeaker speaker2 = SystemSpeaker.getInstance();
+        Scanner sc = new Scanner(System.in);
 
-        //5, 5
-        System.out.println(speaker1.getVolume());
-        System.out.println(speaker2.getVolume());
+        IBeverage beverage = new Base();
+        boolean done = false;
 
-        speaker1.setVolume(11);
-        //11, 11
-        System.out.println(speaker1.getVolume());
-        System.out.println(speaker2.getVolume());
-
-        speaker2.setVolume(22);
-        //22, 22
-        System.out.println(speaker1.getVolume());
-        System.out.println(speaker2.getVolume());
-
+        while(!done) {
+            System.out.println("음료 현재 가격 : " + beverage.getTotalPrice());
+            System.out.println("선택 : 1: 샷추가 / 2 : 우유 추가");
+            switch (sc.nextInt()) {
+                case 0 : done = true;
+                    break;
+                case 1 :
+                    beverage = new Espresso(beverage);
+                    break;
+                case 2 :
+                    beverage = new Milk(beverage);
+                    break;
+            }
+        }
+        System.out.println("음료 가격 : " + beverage.getTotalPrice());
+        sc.close();
     }
 }
