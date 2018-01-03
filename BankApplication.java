@@ -46,8 +46,8 @@ public class BankApplication {
         balance = scanner.nextInt();
         for(int i = 0; i < 100; i++) {
             if(accoutArray[i] == null) {
-                accoutArray[i] = new Accout(ano, name, balance);
-                break;
+                    accoutArray[i] = new Accout(ano, name, balance);
+                    break;
             }
         }
         System.out.println("결과: 계좌가 생성되었습니다.");
