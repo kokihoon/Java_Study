@@ -20,8 +20,8 @@ public class ExecuteExample {
                     int value = Integer.parseInt("삼");
                 }
             };
-            executorService.execute(runnable);
-            //executorService.submit(runnable);
+            //executorService.execute(runnable);
+            executorService.submit(runnable);
             try {
                 Thread.sleep(10);
             }catch (Exception e) {
