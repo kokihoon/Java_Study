@@ -16,9 +16,7 @@ public class BeepPrintExample1 {
             System.out.println("띵");
             try {
                 Thread.sleep(500);
-
             }catch (Exception e) {
-
             }
         }
     }
