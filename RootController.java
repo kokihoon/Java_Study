@@ -1,17 +1,19 @@
 import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TextArea;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Circle;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class RootController implements Initializable {
-    @FXML private javafx.scene.control.TextArea textArea1;
-    @FXML private TextArea textArea2;
+    @FXML private AnchorPane root;
+    @FXML private Circle circle;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Bindings.bindBidirectional(textArea1.textProperty(), textArea2.textProperty());
+        circle.centerXProperty().bind(Bindings.divide(root.widthProperty(), 2));
+        circle.centerYProperty().bind(Bindings.divide(root.heightProperty(), 2));
     }
-
 }
